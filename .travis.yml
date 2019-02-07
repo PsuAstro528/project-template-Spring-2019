@@ -13,7 +13,7 @@ script:
 #  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
 #  - julia -e 'using Pkg; ENV["PYTHON"]=""; Pkg.build("PyCall")'
 #  - julia -e 'using PyCall; pyimport_conda("astropy.io.ascii","astropy")'
-#  - cp Project.toml test/
+  - cp Project.toml test/
   - julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();'
   - julia test/runtests.jl
 
